@@ -1,14 +1,9 @@
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.24;
 
-contract Counter {
-    uint256 public number;
+contract BlockTest2{
 
-    function setNumber(uint256 newNumber) public {
-        number = newNumber;
-    }
-
-    function increment() public {
-        number++;
+     function test2() public view returns(bytes32 b46,uint number45){//当前blockhash 返回是0 原因未知
+         number45 = block.number; // 当前区块号
+         b46=blockhash(number45);   
     }
 }
